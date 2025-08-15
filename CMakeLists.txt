@@ -194,10 +194,7 @@ endif ()
 if (FT_WITH_PNG)
   find_package(PNG REQUIRED)
 else ()
-  # PNG support disabled.
-  # We can't have the build have a dependency on libPNG.
-  # We don't need it and also it's linking to the libPNG in my Homebrew Cellar which will definitely break stuff.
-  # find_package(PNG)
+  find_package(PNG)
 endif ()
 
 if (FT_WITH_ZLIB)
