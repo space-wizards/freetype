@@ -33,6 +33,9 @@
 #define FTIMAGE_H_
 
 
+#include <stdint.h>
+
+
 FT_BEGIN_HEADER
 
 
@@ -54,12 +57,7 @@ FT_BEGIN_HEADER
    *   the context, these can represent distances in integer font units, or
    *   16.16, or 26.6 fixed-point pixel coordinates.
    */
-#if _WIN64
-  typedef signed __int64 FT_Pos;
-#else
-  typedef signed long FT_Pos;
-#endif
-
+  typedef intptr_t FT_Pos;
 
   /**************************************************************************
    *
